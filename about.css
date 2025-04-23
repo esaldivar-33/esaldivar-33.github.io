@@ -1,8 +1,15 @@
+/* ===== Reset y base ===== */
 body {
-    font-family: Arial, sans-serif;
+    /* font-family: Arial, sans-serif; */
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  h2 {
+    color: #0d1117;
+    margin-bottom: 20px;
   }
   
   section {
@@ -14,9 +21,10 @@ body {
     /* border-radius: 8px; */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 40px 20px;
+    flex-direction: column;
   }
   
-  /* Geek background base */
+  /* ===== Geek Background base para secciones ===== */
   .geek-background {
     position: relative;
     overflow: hidden;
@@ -70,7 +78,7 @@ body {
   }
   
   .geek-background.blue::before {
-    color: rgba(2, 0, 146, 0.05);
+    color: rgba(0, 123, 255, 0.05);
     background: linear-gradient(90deg, transparent, rgba(0, 123, 255, 0.1), transparent);
   }
   
@@ -83,30 +91,92 @@ body {
     background: linear-gradient(90deg, transparent, rgba(0, 255, 0, 0.1), transparent);
   }
   
-  /* Contenido dentro de las secciones */
+  /* ===== Contenedores generales ===== */
   .section-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
-    /* font-family: Arial, sans-serif; Contenido legible */
+    /* font-family: Arial, sans-serif; */
     color: #eee;
   }
   
-  /* Ejemplo para mainsection */
-  #mainsection.geek-background .name {
-    font-size: 12vh;
-    font-weight: bold;
-    color: #dbeafe;
-    text-align: left;
-    margin: 128px auto;
+  /* ===== Sección Mainsection ===== */
+  #mainsection {
+    flex-direction: column;
+    padding-bottom: 60px;
   }
   
+  #mainsection .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: nowrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  #mainsection .content > div:first-child {
+    flex-shrink: 0;
+  }
+  
+  #mainsection .name-container {
+    text-align: left;
+    max-width: 600px;
+  }
+  
+  #mainsection .name {
+    font-size: 10vh;
+    font-weight: bold;
+    color: #dbeafe;
+    margin-bottom: 20px;
+    line-height: 1.1;
+  }
+  
+  /* Redes sociales en mainsection */
+  .social-icons-header {
+    margin-top: 20px;
+  }
+  
+  .social-icons-header a {
+    color: #dbeafe;
+    margin-right: 15px;
+    font-size: 28px;
+    transition: color 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .social-icons-header a:hover,
+  .social-icons-header a:focus {
+    color: #60a5fa;
+    outline: none;
+  }
+  
+  /* Bloque de citas */
+  #mainsection blockquote {
+    margin-top: 40px;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #ccc;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+  }
+  
+  #mainsection > .section-container {
+    margin-top: 60px;
+    padding: 0 20px;
+  }
+  
+  /* ===== Sección Skills ===== */
   .skills-container {
     display: flex;
-    flex-wrap: wrap; /* Permite que las tarjetas bajen a la siguiente fila si no caben */
-    justify-content: center; /* Centra las tarjetas horizontalmente */
-    gap: 30px; /* Espacio entre tarjetas */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
     padding: 20px 0;
   }
   
@@ -122,7 +192,7 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
     cursor: default;
-    width: 180px; /* Ancho fijo para que se alineen en fila */
+    width: 180px;
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 0.6s forwards;
@@ -166,41 +236,23 @@ body {
     }
   }
   
-
-
-
-
+  /* ===== Sección Technologies Strip ===== */
   .technologies-strip {
     padding: 20px 0;
     /* max-width: 1200px; */
-    margin: 0 auto;
+    /* margin: 0 auto 40px auto; */
     overflow: hidden;
     white-space: nowrap;
     font-family: monospace;
     color: #eee;
     /* border-radius: 8px; */
     box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    background: linear-gradient(135deg, #001f3f, #003366);
+    position: relative;
+    z-index: 1;
   }
   
-  
-#technologies {
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-
-.tag {
-    display: inline-block;
-    background-color: #383838;
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 20px;
-    font-size: 16px;
-    font-weight: bold;
-    white-space: nowrap;
-}
-.tag-container {
+  .tag-container {
     overflow: hidden;
     white-space: nowrap;
     position: relative;
@@ -208,8 +260,20 @@ body {
   
   .tag-list {
     display: inline-block;
-    padding-left: 100%; /* Empieza fuera del viewport */
+    padding-left: 100%;
     animation: scrollTags 20s linear infinite;
+  }
+  
+  .tag {
+    display: inline-block;
+    background-color: #f1f1f1;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+    color: #111;
   }
   
   @keyframes scrollTags {
@@ -220,31 +284,27 @@ body {
       transform: translateX(-100%);
     }
   }
-
-
-
-
-
-  /* Iconos sociales en encabezado */
-.social-icons-header {
-    margin-top: 20px;
+  
+  /* ===== Sección Contact ===== */
+  #contact.geek-background {
+    padding: 60px 20px;
+    font-family: monospace;
+    color: #eee;
+    text-align: center;
   }
   
-  .social-icons-header a {
-    color: #dbeafe; /* Azul claro */
-    margin-right: 15px;
-    font-size: 28px;
-    transition: color 0.3s ease;
-    text-decoration: none;
+  .contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
   }
   
-  .social-icons-header a:hover,
-  .social-icons-header a:focus {
-    color: #60a5fa; /* Azul más brillante */
-    outline: none;
+  .contact-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #eee;
   }
   
-  /* Contacto: lista y iconos */
   .contact-list {
     list-style: none;
     padding: 0;
@@ -252,9 +312,6 @@ body {
     font-size: 18px;
     color: #e0e7ff;
     text-align: left;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
   }
   
   .contact-list li {
@@ -272,7 +329,6 @@ body {
     outline: none;
   }
   
-  /* Iconos sociales grandes en contacto */
   .contact-icons {
     margin-top: 30px;
     font-size: 36px;
@@ -290,5 +346,81 @@ body {
   .contact-icons a:focus {
     color: #60a5fa;
     outline: none;
+  }
+  
+  /* ===== Media Queries para Responsividad ===== */
+  @media (max-width: 768px) {
+  
+    /* Mainsection */
+    #mainsection .content {
+      flex-direction: column;
+      gap: 30px;
+      padding: 10px;
+    }
+  
+    #mainsection .name-container {
+      max-width: 100%;
+      text-align: center;
+    }
+  
+    #mainsection .name {
+      font-size: 7vh;
+      margin-bottom: 15px;
+    }
+  
+    #mainsection .content > div:first-child img {
+      width: 150px;
+      height: auto;
+    }
+  
+    /* Bloque de citas */
+    #mainsection blockquote {
+      margin-top: 60px;
+      font-size: 0.9rem;
+    }
+  
+    #mainsection > .section-container {
+      margin-top: 80px;
+    }
+  
+    /* Skills */
+    .skill-card {
+      width: 140px;
+    }
+  
+    /* Technologies strip */
+    .technologies-strip {
+      padding: 15px 10px;
+    }
+  
+    .tag {
+      font-size: 14px;
+      padding: 8px 15px;
+    }
+  
+    /* Contact */
+    .contact-container {
+      padding: 0 10px;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    #mainsection .name {
+      font-size: 5vh;
+      margin-bottom: 10px;
+    }
+  
+    #mainsection .content > div:first-child img {
+      width: 120px;
+    }
+  
+    .skill-card {
+      width: 120px;
+    }
+  
+    .tag {
+      font-size: 12px;
+      padding: 6px 12px;
+    }
   }
   
