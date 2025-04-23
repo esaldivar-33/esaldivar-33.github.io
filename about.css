@@ -1,231 +1,198 @@
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-}
-header {
-    background: #0d1117;
-    color: white;
-    padding: 80px 20px;
-    text-align: center;
-}
-h2 {
-    color: #0d1117;
-}
-section {
-    padding: 20px;
-    margin: 20px;
+  }
+  
+  section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: white;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-.skills-container {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-gap: 30px;
-}
-
-.skill-card {
-background: #0d1117;
-color: white;
-padding: 10px;
-border-radius: 10px;
-display: flex;
-flex-direction: column;
-align-items: center;
-text-align: center;
-transition: transform 0.3s ease;
-}
-
-.skill-card:hover {
-transform: translateY(-10px);
-}
-
-.skill-icon {
-font-size: 40px;
-margin-bottom: 20px;
-}
-
-.skill-title {
-font-size: 18px;
-font-weight: bold;
-}
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #0d1117;
-    color: white;
+    padding: 40px 20px;
+  }
+  
+  /* Geek background base */
+  .geek-background {
     position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-.projects-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-top: 20px;
-}
-
-.projects-title {
-    flex: 1; /* Title takes one part of the space */
-    margin: 0; /* Remove default margin */
-    padding: 1em;
-    font-size: 40px;
-}
-
-.projects-list {
-    flex: 2; /* List takes two parts of the space */
-    padding-left: 20px; /* Optional padding for spacing */
-    list-style-type: none; /* Remove default list styling */
-}
-
-.projects-list li {
-    margin-bottom: 10px; /* Space between list items */
-}
-
-.projects-list a {
-    color: #007BFF; /* Change link color to match your theme */
-    text-decoration: none; /* Remove underline from links */
-}
-
-.projects-list a:hover {
-    text-decoration: underline; /* Underline on hover for better UX */
-}
-
-.about-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-top: 20px;
-}
-
-.about-left {
-    flex: 1;
-    padding-right: 20px; /* Space between columns */
-    margin: 1em;
-    font-size: 40px;
-    font-weight: bold;
-    opacity: 0; /* Start invisible */
-    transform: translateY(20px); /* Start slightly lower */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Transition for fade and slide */
-}
-
-.about-left.visible {
-    opacity: 1; /* Fully visible */
-    transform: translateY(0); /* Move to original position */
-}
-.about-left h3 {
-    margin: 0;
-}
-
-.about-right {
-    flex: 2; /* Take more space than the left column */
-}
-
-.contact-container {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.contact-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-top: 20px;
-}
-
-.contact-title {
-    flex: 1;
-    margin: 50px;
-    font-size: 30px;
-}
-
-.contact-info {
-    flex: 2; /* Info takes two parts of the space */
-    padding-left: 20px; /* Optional padding for spacing */
-    text-align: left; /* Align info to the right */
-}
-
-.contact-info a {
-    color: #007BFF; /* Change link color to match your theme */
-    text-decoration: none; /* Remove underline from links */
-    font-size: 18px; /* Adjust font size */
-}
-
-.contact-info a:hover {
-    text-decoration: underline; /* Underline on hover for better UX */
-}
-
-.contact-info i {
-    margin-right: 8px; /* Space between icon and text */
-    color: #007BFF; /* Icon color */
-    font-size: 40px;
-}
-.contact-icons {
-    font-size: 1rem; /* Adjust this value to make icons bigger or smaller */
-}
-
-.contact-icons a {
-    margin: 0 20px; /* Add some space between icons */
-}
-
-
-#quotes {
-    background-color: #f4f4f4;
-    padding: 40px;
-    text-align: center;
-    opacity: 0; /* Start invisible */
-    transform: translateY(50px); /* Start slightly lower */
-    animation: fade-in 0.8s ease forwards; /* Animation properties */
-}
-
-@keyframes fade-in {
+    overflow: hidden;
+    background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+    color: #eee;
+    padding: 60px 20px;
+    font-family: monospace;
+    transition: background 0.3s ease;
+  }
+  
+  .geek-background::before {
+    content: "0101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    font-size: 14px;
+    line-height: 1.2;
+    color: rgba(255, 255, 255, 0.05);
+    white-space: pre-wrap;
+    overflow: hidden;
+    user-select: none;
+    pointer-events: none;
+    transform: rotate(-15deg);
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    background-clip: text;
+    -webkit-background-clip: text;
+    mix-blend-mode: screen;
+    z-index: 0;
+    animation: moveBinary 30s linear infinite;
+  }
+  
+  .geek-background > * {
+    position: relative;
+    z-index: 1;
+  }
+  
+  @keyframes moveBinary {
     0% {
-        opacity: 0;
-        transform: translateY(50px);
+      transform: translateX(0) rotate(-15deg);
     }
     100% {
-        opacity: 1;
-        transform: translateY(0);
+      transform: translateX(-50%) rotate(-15deg);
     }
-}
+  }
+  
+  /* Variantes de color para geek-background */
+  .geek-background.blue {
+    background: linear-gradient(135deg, #001f3f, #003366);
+  }
+  
+  .geek-background.blue::before {
+    color: rgba(2, 0, 146, 0.05);
+    background: linear-gradient(90deg, transparent, rgba(0, 123, 255, 0.1), transparent);
+  }
+  
+  .geek-background.green {
+    background: linear-gradient(135deg, #003300, #006600);
+  }
+  
+  .geek-background.green::before {
+    color: rgba(0, 255, 0, 0.05);
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 0, 0.1), transparent);
+  }
+  
+  /* Contenido dentro de las secciones */
+  .section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    /* font-family: Arial, sans-serif; Contenido legible */
+    color: #eee;
+  }
+  
+  /* Ejemplo para mainsection */
+  #mainsection.geek-background .name {
+    font-size: 12vh;
+    font-weight: bold;
+    color: #dbeafe;
+    text-align: left;
+    margin: 128px auto;
+  }
+  
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas bajen a la siguiente fila si no caben */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    gap: 30px; /* Espacio entre tarjetas */
+    padding: 20px 0;
+  }
+  
+  .skill-card {
+    background: linear-gradient(135deg, #1f2937, #111827);
+    color: #f9fafb;
+    padding: 25px 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    cursor: default;
+    width: 180px; /* Ancho fijo para que se alineen en fila */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards;
+  }
+  
+  .skill-card:nth-child(1) { animation-delay: 0.1s; }
+  .skill-card:nth-child(2) { animation-delay: 0.2s; }
+  .skill-card:nth-child(3) { animation-delay: 0.3s; }
+  .skill-card:nth-child(4) { animation-delay: 0.4s; }
+  .skill-card:nth-child(5) { animation-delay: 0.5s; }
+  .skill-card:nth-child(6) { animation-delay: 0.6s; }
+  
+  .skill-card:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(8, 47, 109, 0.7);
+    background: linear-gradient(135deg, #022166, #1e40af);
+    color: #e0e7ff;
+  }
+  
+  .skill-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #3b82f6;
+    transition: color 0.3s ease;
+  }
+  
+  .skill-card:hover .skill-icon {
+    color: #dbeafe;
+  }
+  
+  .skill-title {
+    font-size: 20px;
+    font-weight: 700;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.7);
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
 
-blockquote {
-    font-size: 24px;
-    font-style: italic;
-    margin: 40px 0;
-}
-
-cite {
-    display: block;
-    font-size: 18px;
-    font-style: normal;
-    margin-top: 10px;
-}
 
 
+
+  .technologies-strip {
+    padding: 20px 0;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: monospace;
+    color: #eee;
+    /* border-radius: 8px; */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  }
+  
+  
 #technologies {
     text-align: center;
     margin: 0;
     padding: 0;
 }
 
-.tag-container {
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-.tag-list {
-    display: inline-block;
-    animation: scroll 20s linear infinite;
-}
 
 .tag {
     display: inline-block;
-    background-color: #f1f1f1;
+    background-color: #383838;
     padding: 10px 20px;
     margin: 5px;
     border-radius: 20px;
@@ -233,12 +200,95 @@ cite {
     font-weight: bold;
     white-space: nowrap;
 }
-
-@keyframes scroll {
+.tag-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+  }
+  
+  .tag-list {
+    display: inline-block;
+    padding-left: 100%; /* Empieza fuera del viewport */
+    animation: scrollTags 20s linear infinite;
+  }
+  
+  @keyframes scrollTags {
     0% {
-        transform: translateX(0);
+      transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%);
+      transform: translateX(-100%);
     }
-}
+  }
+
+
+
+
+
+  /* Iconos sociales en encabezado */
+.social-icons-header {
+    margin-top: 20px;
+  }
+  
+  .social-icons-header a {
+    color: #dbeafe; /* Azul claro */
+    margin-right: 15px;
+    font-size: 28px;
+    transition: color 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .social-icons-header a:hover,
+  .social-icons-header a:focus {
+    color: #60a5fa; /* Azul más brillante */
+    outline: none;
+  }
+  
+  /* Contacto: lista y iconos */
+  .contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    font-size: 18px;
+    color: #e0e7ff;
+    text-align: left;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .contact-list li {
+    margin-bottom: 12px;
+  }
+  
+  .contact-list a {
+    color: #60a5fa;
+    text-decoration: none;
+  }
+  
+  .contact-list a:hover,
+  .contact-list a:focus {
+    text-decoration: underline;
+    outline: none;
+  }
+  
+  /* Iconos sociales grandes en contacto */
+  .contact-icons {
+    margin-top: 30px;
+    font-size: 36px;
+    text-align: center;
+  }
+  
+  .contact-icons a {
+    color: #dbeafe;
+    margin: 0 20px;
+    transition: color 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .contact-icons a:hover,
+  .contact-icons a:focus {
+    color: #60a5fa;
+    outline: none;
+  }
+  

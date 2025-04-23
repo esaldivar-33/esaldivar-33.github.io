@@ -6,44 +6,134 @@
     <title>Edson Saldivar - Portfolio</title>
     <link rel="stylesheet" href="about.css"> <!-- Link to your CSS file -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    
+
     <style>
       
     </style>
 </head>
 <body>
 
-<header>
+
+<!-- <header>
     <h1>edson saldivar</h1>
     <p>software developer | creative problem solver | data analysis | rpa automations | design and photograph | animation | and more </p> 
    
-</header>
+</header> -->
 
-<section id="quotes">
-    <blockquote id="quote-container">
-        <p id="quote-text"></p>
-        <cite id="quote-author"></cite>
-    </blockquote>
+<section id="mainsection" class="geek-background">
+    <div style="display: flex;" class="content ">
+        <div style="margin: auto;">
+            <img src="assets/e-logo3.png" height="250" width="250" alt="e-soluciones">
+        </div>   
+        <div class="section-container name-container">
+            <div class="name">edson saldivar</div>
+            <p>software developer | creative problem solver | data analysis | rpa automations | design and photograph | animation | and more </p>
+        
+             <!-- Redes sociales en encabezado -->
+            <div class="social-icons-header">
+                <a href="mailto:esaldivar.dev@hotmail.com" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/e-saldivar/" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/esaldivar-33" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+                </a>
+            </div>
+        
+        
+        </div>
+    </div>
+    
+    <div class="section-container">   
+        <blockquote id="quote-container">
+            <p id="quote-text"></p>
+            <cite id="quote-author"></cite>
+        </blockquote>
+    </div>
+
 </section>
 
 
+<div class="technologies-strip geek-background blue">
+    <div class="tag-container">
+      <!-- tu contenido de tags -->
 
-<section id="about">
-    <h2>Who am I</h2>
-    <div class="about-container">
-        <div class="about-left fade-in">
-            <p>Hi, I'm Edson, a developer based in Mexico City</p>
+      <div class="tag-container">
+        <div class="tag-list">
+            <div class="tag">.net programming</div>
+            <div class="tag">sql server</div>
+            <div class="tag">mongo db</div>
+            <div class="tag">python</div>
+            <div class="tag">node.js</div>
+            <div class="tag">power apps</div>
+            <div class="tag">power bi</div>
+            <div class="tag">power automate</div>
+            <div class="tag">mobile apps</div>
+            <div class="tag">css</div>
+            <div class="tag">design patterns</div>
+            <div class="tag">asp.net mvc</div>
+            <div class="tag">web apis</div>
+            <div class="tag">github</div>
+            <div class="tag">android/ios development</div>
+            <div class="tag">unity (c#)</div>
+            <div class="tag">aws cloud computing</div>
+            <div class="tag">business intelligence</div>
+            <div class="tag">azure devops</div> 
+            <div class="tag">video edition</div>
+            
         </div>
-        <div class="about-right">
-            <p>I'm a passionate software developer dedicated to transforming ideas into efficient digital solutions.</p>
-            <p>With extensive experience in developing web and mobile applications, I focus on bring the new techs to all my partners.</p>
-            <p>I help companies to work more efficiently, get expousure and solve optimization problems creating versatile, robust and inspirational solutions.</p>
-            <p>I thrive on challenges and excel at identifying and resolving complex issues, ensuring that my solutions are not only effective but also scalable and maintainable.</p>
+        <div class="tag-list">
+            <!-- Duplicate the list for continuous scrolling -->
+            <div class="tag">.net programming</div>
+            <div class="tag">sql server</div>
+            <div class="tag">mongo db</div>
+            <div class="tag">python</div>
+            <div class="tag">node.js</div>
+            <div class="tag">power apps</div>
+            <div class="tag">power bi</div>
+            <div class="tag">power automate</div>
+            <div class="tag">mobile apps</div>
+            <div class="tag">css</div>
+            <div class="tag">design patterns</div>
+            <div class="tag">asp.net mvc</div>
+            <div class="tag">web apis</div>
+            <div class="tag">github</div>
+            <div class="tag">android/ios development</div>
+            <div class="tag">unity (c#)</div>
+            <div class="tag">aws cloud computing</div>
+            <div class="tag">business intelligence</div>
+            <div class="tag">azure devops</div> 
+            <div class="tag">video edition</div>
         </div>
+    </div>
+    </div>
+  </div>
+
+
+<section id="about" class="geek-background"> 
+    <div class="section-container">  
+        <div class="about-container"> 
+            <div class="about-right parag">
+                <h2>Who am I</h2>
+                <p>I'm a passionate software developer dedicated to transforming ideas into efficient digital solutions.</p>
+                <p>With extensive experience in developing web and mobile applications, I focus on bring the new techs to all my partners.</p>
+                <p>I help companies to work more efficiently, get expousure and solve optimization problems creating versatile, robust and inspirational solutions.</p>
+                <p>I thrive on challenges and excel at identifying and resolving complex issues, ensuring that my solutions are not only effective but also scalable and maintainable.</p>
+            </div>
+            <div class="about-left fade-in">
+                <p>Hi, I'm Edson, a developer based in Mexico City</p>
+            </div>
+        </div>
+   
     </div>
 </section>
 
-<section id="skills">
-    <h2>Skills</h2>
+<section id="skills" class="geek-background">
+    <div>   
+       <h2>Skills</h2>
     <div class="skills-container">
       <div class="skill-card">
         <div class="skill-icon">
@@ -81,54 +171,59 @@
         </div>
         <h3 class="skill-title">Desktop Applications</h3>
       </div>
+    </div>     
     </div>
+
   </section>
 
-  <section id="technologies">
+  <section id="technologies" class="geek-background" style="display: none;">
     <!-- <h2>Technologies I've Worked With</h2> -->
     <div class="tag-container">
         <div class="tag-list">
-            <div class="tag">.NET Programming</div>
-            <div class="tag">SQL Server</div>
-            <div class="tag">MongoDB</div>
-            <div class="tag">Python</div>
-            <div class="tag">Node.js</div>
-            <div class="tag">Power Apps</div>
-            <div class="tag">Power BI</div>
-            <div class="tag">Power Automate</div>
-            <div class="tag">Mobile Apps</div>
-            <div class="tag">CSS</div>
-            <div class="tag">Design Patterns</div>
-            <div class="tag">ASP.NET MVC</div>
-            <div class="tag">Web APIs</div>
-            <div class="tag">GitHub</div>
-            <div class="tag">Android/iOS Development</div>
-            <div class="tag">Unity (C#)</div>
-            <div class="tag">AWS Cloud Computing</div>
-            <div class="tag">Business Intelligence</div>
-            <div class="tag">Azure DevOps</div> 
+            <div class="tag">.net programming</div>
+            <div class="tag">sql server</div>
+            <div class="tag">mongo db</div>
+            <div class="tag">python</div>
+            <div class="tag">node.js</div>
+            <div class="tag">power apps</div>
+            <div class="tag">power bi</div>
+            <div class="tag">power automate</div>
+            <div class="tag">mobile apps</div>
+            <div class="tag">css</div>
+            <div class="tag">design patterns</div>
+            <div class="tag">asp.net mvc</div>
+            <div class="tag">web apis</div>
+            <div class="tag">github</div>
+            <div class="tag">android/ios development</div>
+            <div class="tag">unity (c#)</div>
+            <div class="tag">aws cloud computing</div>
+            <div class="tag">business intelligence</div>
+            <div class="tag">azure devops</div> 
+            <div class="tag">video edition</div>
             
         </div>
         <div class="tag-list">
             <!-- Duplicate the list for continuous scrolling -->
-            <div class="tag">.NET Programming</div>
-            <div class="tag">SQL Server</div>
-            <div class="tag">MongoDB</div>
-            <div class="tag">Python</div>
-            <div class="tag">Node.js</div>
-            <div class="tag">Power Apps</div>
-            <div class="tag">Power BI</div>
-            <div class="tag">Power Automate</div>
-            <div class="tag">Mobile Apps</div>
-            <div class="tag">CSS</div>
-            <div class="tag">Design Patterns</div>
-            <div class="tag">ASP.NET MVC</div>
-            <div class="tag">Web APIs</div>
-            <div class="tag">GitHub</div>
-            <div class="tag">Android/iOS Development</div>
-            <div class="tag">Unity (C#)</div>
-            <div class="tag">AWS</div>
-            <div class="tag">Business Intelligence</div>
+            <div class="tag">.net programming</div>
+            <div class="tag">sql server</div>
+            <div class="tag">mongo db</div>
+            <div class="tag">python</div>
+            <div class="tag">node.js</div>
+            <div class="tag">power apps</div>
+            <div class="tag">power bi</div>
+            <div class="tag">power automate</div>
+            <div class="tag">mobile apps</div>
+            <div class="tag">css</div>
+            <div class="tag">design patterns</div>
+            <div class="tag">asp.net mvc</div>
+            <div class="tag">web apis</div>
+            <div class="tag">github</div>
+            <div class="tag">android/ios development</div>
+            <div class="tag">unity (c#)</div>
+            <div class="tag">aws cloud computing</div>
+            <div class="tag">business intelligence</div>
+            <div class="tag">azure devops</div> 
+            <div class="tag">video edition</div>
         </div>
     </div>
 </section>
@@ -144,38 +239,33 @@
     </div>
 </section>
 
-<section id="contact">
+<section id="contact" class="geek-background">
     <div class="contact-container">
-        <h2 class="contact-title">Let's Get in Touch</h2>
-        <div class="contact-info">
-            <p>Are you working on a project?</p>
-            <p>Have a question about my work?</p>
-            <p>Want to grab coffee?</p>
-            <p>I'd love to hear from you.</p>
-            
-           <p class="contact-icons">
-                <a href="mailto:esaldivar.dev@hotmail.com">
-                    <i class="fas fa-envelope"></i> 
-                </a>
-            
-        
-                <a href="https://www.linkedin.com/in/e-saldivar/" target="_blank">
-                    <i class="fab fa-linkedin"></i> 
-                </a>
-        
-           
-                <a href="https://github.com/esaldivar-33" target="_blank">
-                    <i class="fab fa-github"></i> 
-                </a>
-                        
-           </p>
-
-        </div>
+      <h2 class="contact-title">Let's Get in Touch</h2>
+      <p>Are you working on a project? Have a question about my work? Want to grab coffee? I'd love to hear from you.</p>
+      
+      <ul class="contact-list">
+        <li>Email: <a href="mailto:esaldivar.dev@hotmail.com">esaldivar.dev@hotmail.com</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/e-saldivar/" target="_blank">linkedin.com/in/e-saldivar</a></li>
+        <li>GitHub: <a href="https://github.com/esaldivar-33" target="_blank">github.com/esaldivar-33</a></li>
+      </ul>
+      
+      <p class="contact-icons">
+        <a href="mailto:esaldivar.dev@hotmail.com" aria-label="Email">
+          <i class="fas fa-envelope"></i> 
+        </a>
+        <a href="https://www.linkedin.com/in/e-saldivar/" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i> 
+        </a>
+        <a href="https://github.com/esaldivar-33" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i> 
+        </a>
+      </p>
     </div>
-</section>
+  </section>
 
-<footer>
-    <p>&copy; 2024 Edson Saldivar. All rights reserved.</p>
+<footer class="geek-background blue">
+    <p>&copy; 2025 Edson Saldivar. All rights reserved.</p>
 </footer>
 
 
