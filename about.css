@@ -248,7 +248,7 @@ body {
   
   /* ===== Sección Technologies Strip ===== */
   .technologies-strip {
-    padding: 20px 0;
+    /* padding: 20px 0; */
     /* max-width: 1200px; */
     /* margin: 0 auto 40px auto; */
     overflow: hidden;
@@ -257,7 +257,8 @@ body {
     color: #eee;
     /* border-radius: 8px; */
     box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    background: linear-gradient(135deg, #001f3f, #003366);
+    /* background: linear-gradient(135deg, #1f2b36, #003366); */
+    background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
     position: relative;
     z-index: 1;
   }
@@ -295,6 +296,111 @@ body {
     }
   }
   
+/*skills section ====*/
+/* Container for Project References - Grid Layout */
+.project-references-container {
+    max-width: 1200px; /* Keep the container centered and limited in width */
+    margin: 40px auto; /* Add space above and below, center the container */
+    padding: 0 20px; /* Add some padding on the sides */
+    text-align: center; /* Center the heading */
+}
+
+.project-references-container h3 {
+    font-size: 24px;
+    color: #eee; /* Match the geek background text color */
+    margin-bottom: 30px;
+    text-align: center; /* Ensure heading is centered */
+}
+
+/* Grid for project items */
+.project-items-grid {
+    display: grid;
+    /* Create columns that are at least 250px wide, and as many as fit */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px; /* Space between grid items */
+    padding: 0; /* Remove default padding */
+    list-style: none; /* Remove list bullets if using ul/li */
+}
+
+
+/* Style for the individual project items */
+.project-item {
+    border: 1px solid #333; /* Darker border for contrast on dark background */
+    padding: 20px; /* Add some internal space */
+    /* margin: 15px 0; /* Remove margin, use grid gap instead */
+    border-radius: 8px; /* Give it rounded corners */
+    background-color: #1a1a1a; /* Darker background for cards */
+    color: #eee; /* Light text color */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add a soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    cursor: pointer; /* Change cursor to indicate interactivity */
+    overflow: hidden; /* Hide anything that might overflow during scale */
+    display: flex; /* Use flexbox for internal layout */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text */
+}
+
+/* Style for the project item on hover */
+.project-item:hover {
+    transform: translateY(-5px) scale(1.03); /* Lift slightly and scale */
+    box-shadow: 0 8px 20px rgba(8, 47, 109, 0.7); /* Make the shadow more prominent and blueish */
+    background-color: #003366; /* Change background on hover */
+}
+
+/* Optional: Style for elements inside the card if needed */
+.project-item h4 {
+    margin-top: 0; /* Adjust spacing */
+    color: #60a5fa; /* Blue color for title */
+    margin-bottom: 10px;
+}
+
+.project-item p {
+    color: #ccc; /* Lighter color for description */
+    font-size: 0.95rem;
+    flex-grow: 1; /* Allow description to take up available space */
+    margin-bottom: 15px;
+}
+
+.project-item video {
+    display: block; /* Ensure video takes up its own line */
+    margin-top: 15px; /* Space above the video */
+    max-width: 100%; /* Ensure video doesn't exceed card width */
+    height: auto;
+    border-radius: 4px; /* Slightly rounded corners for the video */
+    background-color: #000; /* Black background for video area */
+}
+
+/* Adjust video player size on hover if needed */
+.project-item:hover video {
+    /* transform: scale(1.02); */ /* Optional: slightly scale video on hover */
+}
+
+/* Style for the project link if you decide to use links instead of embedding */
+.project-item .project-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    background-color: #3b82f6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.project-item .project-link:hover {
+    background-color: #60a5fa;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    .project-items-grid {
+        grid-template-columns: 1fr; /* Stack items on very small screens */
+        gap: 20px;
+    }
+}
+
+
   /* ===== Sección Contact ===== */
   #contact.geek-background {
     padding: 60px 20px;
