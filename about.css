@@ -20,7 +20,7 @@ body {
     background: white;
     /* border-radius: 8px; */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 40px 20px;
+    padding: 30px 20px;
     flex-direction: column;
   }
   
@@ -30,7 +30,7 @@ body {
     overflow: hidden;
     background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
     color: #eee;
-    padding: 60px 20px;
+    padding: 40px 20px;
     font-family: monospace;
     transition: background 0.3s ease;
   }
@@ -74,7 +74,7 @@ body {
   
   /* Variantes de color para geek-background */
   .geek-background.blue {
-    background: linear-gradient(135deg, #001f3f, #003366);
+    background: linear-gradient(135deg, #121920, #2a2f35);
   }
   
   .geek-background.blue::before {
@@ -104,18 +104,18 @@ body {
   /* ===== Sección Mainsection ===== */
   #mainsection {
     flex-direction: column;
-    padding-bottom: 60px;
+    padding-bottom: 30px;
   }
   
   #mainsection .content {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 32px;
     flex-wrap: nowrap;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 16px 20px;
   }
   
   #mainsection .content > div:first-child {
@@ -128,11 +128,13 @@ body {
   }
   
   #mainsection .name {
-    font-size: 10vh;
-    font-weight: bold;
+    font-size: clamp(4.8rem, 9vw, 8.5rem);
+    font-weight: 900;
     color: #dbeafe;
-    margin-bottom: 20px;
-    line-height: 1.1;
+    margin-bottom: 18px;
+    line-height: 0.9;
+    letter-spacing: -0.08em;
+    text-transform: lowercase;
   }
   .about-container{
     display: flex;
@@ -140,8 +142,8 @@ body {
 
   .about-left{
     font-size: 3rem;
-
   }
+
   .about-right{
     text-align: right;
   }
@@ -177,7 +179,7 @@ body {
   }
   
   #mainsection > .section-container {
-    margin-top: 60px;
+    margin-top: 30px;
     padding: 0 20px;
   }
   
@@ -300,7 +302,7 @@ body {
 /* Container for Project References - Grid Layout */
 .project-references-container {
     max-width: 1200px; /* Keep the container centered and limited in width */
-    margin: 40px auto; /* Add space above and below, center the container */
+    margin: 25px auto; /* Add space above and below, center the container */
     padding: 0 20px; /* Add some padding on the sides */
     text-align: center; /* Center the heading */
 }
@@ -308,7 +310,7 @@ body {
 .project-references-container h3 {
     font-size: 24px;
     color: #eee; /* Match the geek background text color */
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     text-align: center; /* Ensure heading is centered */
 }
 
@@ -317,7 +319,7 @@ body {
     display: grid;
     /* Create columns that are at least 250px wide, and as many as fit */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px; /* Space between grid items */
+    gap: 20px; /* Space between grid items */
     padding: 0; /* Remove default padding */
     list-style: none; /* Remove list bullets if using ul/li */
 }
@@ -397,6 +399,16 @@ body {
     .project-items-grid {
         grid-template-columns: 1fr; /* Stack items on very small screens */
         gap: 20px;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-left,
+    .about-right {
+        text-align: center;
+        align-items: center;
     }
 }
 
